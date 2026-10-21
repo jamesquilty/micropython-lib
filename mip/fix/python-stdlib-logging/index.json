@@ -866,16 +866,16 @@
     },
     {
       "name": "logging",
-      "version": "0.6.3",
+      "version": "0.7.0",
       "author": "",
       "description": "",
       "license": "MIT",
       "versions": {
         "py": [
-          "0.6.3"
+          "0.7.0"
         ],
         "6": [
-          "0.6.3"
+          "0.7.0"
         ]
       },
       "path": "python-stdlib/logging"
@@ -2002,5 +2002,5 @@
     }
   ],
   "v": 2,
-  "updated": 1792558930
+  "updated": 1792562374
 }
