@@ -221,15 +221,24 @@ def basicConfig(
     encoding="UTF-8",
     force=False,
 ):
+    """
+    Perform basic configuration of the logging system.
+
+    Creates a logger named "root" and adds a single handler, either a
+    StreamHandler or FileHandler, with configuration specified by the arguments.
+    Defaults to adding a StreamHandler which writes to sys.stderr. If a root
+    logger with handlers already exists, no changes are made by default.
+    """
+
     if "root" not in _loggers:
         _loggers["root"] = Logger("root")
 
-    logger = _loggers["root"]
+    root = _loggers["root"]
 
-    if force or not logger.handlers:
-        for h in logger.handlers:
+    if force or not root.hasHandlers():
+        for h in root.handlers:
             h.close()
-        logger.handlers = []
+        root.handlers = []
 
         if filename is None:
             handler = StreamHandler(stream)
@@ -238,8 +247,8 @@ def basicConfig(
 
         handler.setFormatter(Formatter(format, datefmt))
 
-        logger.setLevel(level)
-        logger.addHandler(handler)
+        root.setLevel(level)
+        root.addHandler(handler)
 
 
 if hasattr(sys, "atexit"):
