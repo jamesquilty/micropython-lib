@@ -1,1 +1,1 @@
-{"v":1,"hashes":[["usb/device/__init__.mpy","ddb2e81c"],["usb/device/core.mpy","1851c1bb"],["usb/device/hid.mpy","6e02beb5"],["usb/device/mouse.mpy","c1c57c19"]],"version":"0.1.0"}
+{"v":1,"hashes":[["usb/device/core.mpy","1851c1bb"],["usb/device/__init__.mpy","ddb2e81c"],["usb/device/hid.mpy","6e02beb5"],["usb/device/mouse.mpy","c1c57c19"]],"version":"0.1.0"}
